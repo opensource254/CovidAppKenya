@@ -23,6 +23,9 @@ on more than one device or emulator run
 
     flutter run -d all 
 
+## Test out the app on android by Installing the app here
+    
+    [Install Android version]()
 ## Contributing
 Check out on how to submit your  [contributions](/CONTRIBUTING.md) to the project
 
