@@ -24,7 +24,7 @@ on more than one device or emulator run
     flutter run -d all 
 
 ## Test out the app on android by Installing the app here
-    [Test App](https://github.com/Opensource-254/CovidAppKenya/tree/master/androidtestapp/app-debug.apk)
+    [Test App](https://github.com/Opensource-254/CovidAppKenya/blob/master/androidtestapp/app-debug.apk)
     
 ## Contributing
 Check out on how to submit your  [contributions](/CONTRIBUTING.md) to the project

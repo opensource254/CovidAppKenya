@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'bottomNavIconAssets.dart';
+
 class MyBottomNavigationBar extends StatelessWidget {
   final int currentIndex;
   final Function onTap;
@@ -10,29 +12,24 @@ class MyBottomNavigationBar extends StatelessWidget {
     return BottomNavigationBar(
       onTap: onTap,
       currentIndex: currentIndex, // new
-      fixedColor: Colors.white,
-      unselectedItemColor: Colors.white,
+      fixedColor: Colors.lightBlue,
+      unselectedItemColor: Colors.lightBlueAccent,
       selectedFontSize: 15.0,
       unselectedFontSize: 10.0,
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.white,
       type: BottomNavigationBarType.fixed,
       items: [
         BottomNavigationBarItem(
-          icon: Icon(
-            Icons.home,
-          ),
+          icon: BottomNavIconImage('assets/images/ichome.png'),
           title: Text('Home'),
+          backgroundColor: Colors.blue,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.accessibility),
-          title: Text('Contacts'),
+          icon: BottomNavIconImage('assets/images/icnews.png'),
+          title: Text('News'),
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.forum),
-          title: Text('doctors'),
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.update),
+          icon: BottomNavIconImage('assets/images/icsituation.png'),
           title: Text('Updates'),
         ),
       ],
