@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'bottomNavBar/bottomNavigation.dart';
-import 'widgets/alerts.dart';
-import 'widgets/landingPage.dart';
-import 'widgets/news.dart';
-import 'widgets/situation.dart';
-import 'widgets/tips.dart';
+import 'widgets/alertsTab/alerts.dart';
+import 'widgets/homeTab/landingPage.dart';
+import 'widgets/newsTab/news.dart';
+import 'widgets/situationTab/situation.dart';
+import 'widgets/tipsTab/tips.dart';
 
 class Home extends StatefulWidget {
   final int showWhichTabs;

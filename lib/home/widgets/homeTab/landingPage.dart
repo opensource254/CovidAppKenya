@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../home.dart';
-import 'reUsables/LandingPageButtons.dart';
+import '../../home.dart';
+import '../reUsables/LandingPageButtons.dart';
 
 class HomeLanding extends StatefulWidget {
   @override
