@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'bottomNavBar/bottomNavigation.dart';
-import 'widgets/doctorsHomeTab.dart';
+import 'widgets/alerts.dart';
 import 'widgets/landingPage.dart';
 import 'widgets/news.dart';
+import 'widgets/situation.dart';
+import 'widgets/tips.dart';
 
 class Home extends StatefulWidget {
   final int showWhichTabs;
@@ -18,8 +20,10 @@ class _HomeState extends State<Home> {
 
   final List<Widget> _bodyChildren = [
     HomeLanding(),
+    Tips(),
     News(),
-    Doctors(),
+    Alerts(),
+    Situation()
   ];
 
   @override

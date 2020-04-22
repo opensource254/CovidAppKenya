@@ -16,7 +16,7 @@ class MyBottomNavigationBar extends StatelessWidget {
       unselectedItemColor: Colors.lightBlueAccent,
       selectedFontSize: 15.0,
       unselectedFontSize: 10.0,
-      backgroundColor: Colors.white,
+//      backgroundColor: Colors.white,
       type: BottomNavigationBarType.fixed,
       items: [
         BottomNavigationBarItem(
@@ -25,12 +25,20 @@ class MyBottomNavigationBar extends StatelessWidget {
           backgroundColor: Colors.blue,
         ),
         BottomNavigationBarItem(
+          icon: Icon(Icons.scatter_plot),
+          title: Text('Tips'),
+        ),
+        BottomNavigationBarItem(
           icon: BottomNavIconImage('assets/images/icnews.png'),
           title: Text('News'),
         ),
         BottomNavigationBarItem(
+            icon: Icon(Icons.error),
+            title: Text('Alerts'),
+            backgroundColor: Colors.green),
+        BottomNavigationBarItem(
           icon: BottomNavIconImage('assets/images/icsituation.png'),
-          title: Text('Updates'),
+          title: Text('Situation'),
         ),
       ],
     );
