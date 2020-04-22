@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../home.dart';
-import '../reUsables/LandingPageButtons.dart';
+import '../reUsables/reusableButton.dart';
 
 class HomeLanding extends StatefulWidget {
   @override
@@ -52,19 +52,19 @@ class _HomeLandingState extends State<HomeLanding> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                LandingPageButtons(
+                ReUsableButton(
                   title: 'Doctors Updates',
                   alignment: Alignment.center,
                   position: 0,
                   navigateFunc: _onTapDoctors,
                 ),
-                LandingPageButtons(
+                ReUsableButton(
                   title: 'Treatment Centers',
                   alignment: Alignment.centerRight,
                   position: 1,
                   navigateFunc: _onTapTreatCenters,
                 ),
-                LandingPageButtons(
+                ReUsableButton(
                   title: 'Quarantine Facilities',
                   alignment: Alignment.centerLeft,
                   position: 2,

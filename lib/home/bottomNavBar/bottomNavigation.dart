@@ -16,7 +16,6 @@ class MyBottomNavigationBar extends StatelessWidget {
       unselectedItemColor: Colors.lightBlueAccent,
       selectedFontSize: 15.0,
       unselectedFontSize: 10.0,
-//      backgroundColor: Colors.white,
       type: BottomNavigationBarType.fixed,
       items: [
         BottomNavigationBarItem(
