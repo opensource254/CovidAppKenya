@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../home.dart';
 import '../../widgets/reUsables/reusableButton.dart';
-import '../../widgets/tipsTab/coronaInfoGridAboveTipsTab.dart';
+import '../../widgets/tipsTab/coronaInfoGridOnHomePage.dart';
 import '../../widgets/tipsTab/healthUnitsNewsRow.dart';
 import '../../widgets/tipsTab/topRowCasesCard.dart';
 
@@ -21,7 +22,6 @@ class HomeLanding extends StatelessWidget {
         ),
         //health units and news
         HealthUnitsNewsRow(),
-
         Center(
           child: Text('Feeling bad!'),
         ),
@@ -34,10 +34,29 @@ class HomeLanding extends StatelessWidget {
           alignment: Alignment.center,
           navigateFunc: () {},
         ),
-        SizedBox(
-          height: 15,
+        Container(
+          margin: EdgeInsets.only(left: 20),
+          child: Text('Tips'),
         ),
-        CoronaInfoGridAboveTipsTab(),
+        SizedBox(
+          height: 10,
+        ),
+        CoronaInfoGridOnHomePage(),
+        SizedBox(
+          height: 5,
+        ),
+        ReUsableButton(
+          title: 'More Tips',
+          position: 0,
+          alignment: Alignment.center,
+          navigateFunc: () {
+            Navigator.push(context, MaterialPageRoute(builder: (_) {
+              return Home(
+                showWhichTabs: 1,
+              );
+            }));
+          },
+        ),
       ],
     );
   }

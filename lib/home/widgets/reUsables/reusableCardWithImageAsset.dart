@@ -9,7 +9,7 @@ class ReusableCardWithImageAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(2),
+      margin: EdgeInsets.only(top: 2, bottom: 2, right: 2, left: 2),
       color: Colors.white,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -20,7 +20,7 @@ class ReusableCardWithImageAsset extends StatelessWidget {
             scale: 10,
           ),
           Container(
-            margin: EdgeInsets.only(top: 3),
+            margin: EdgeInsets.only(top: 2),
             alignment: Alignment.center,
             child: Text(
               title,
