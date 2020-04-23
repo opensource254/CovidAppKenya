@@ -10,7 +10,7 @@ class ReusableCardWithImageAsset extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 2, bottom: 2, right: 2, left: 2),
-      color: Colors.white,
+      color: Color(0xFFA0D2ED),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,

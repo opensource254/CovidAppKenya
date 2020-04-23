@@ -23,7 +23,7 @@ class _HomeState extends State<Home> {
     Tips(),
     News(),
     Alerts(),
-    Situation()
+    Situation(),
   ];
 
   @override
@@ -44,6 +44,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Container(child: _bodyChildren[_currentTabIndex]),
       bottomNavigationBar: MyBottomNavigationBar(
         currentIndex: _currentTabIndex,

@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import './home/home.dart';
 
 void main() {
-  //set system settings i.e orientation
-//  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitUp]);
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'CovidApp',

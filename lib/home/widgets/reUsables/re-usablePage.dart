@@ -12,27 +12,29 @@ class ReUsablePageTitleContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: <Widget>[
-        Row(
-          children: <Widget>[
-            Container(
-              child: ReusableCardWithImageAsset(
-                title: title,
-                path: imagePath,
-              ),
-            )
-          ],
-        ),
-        SizedBox(height: 5),
-        Column(
-          children: <Widget>[
-            Container(
-              child: Text(content),
-            )
-          ],
-        )
-      ],
+    return Scaffold(
+      body: ListView(
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              Container(
+                child: ReusableCardWithImageAsset(
+                  title: title,
+                  path: imagePath,
+                ),
+              )
+            ],
+          ),
+          SizedBox(height: 5),
+          Column(
+            children: <Widget>[
+              Container(
+                child: Text(content),
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }

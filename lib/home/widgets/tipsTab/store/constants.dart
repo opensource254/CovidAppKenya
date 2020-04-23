@@ -7,7 +7,7 @@ final List<Map<String, String>> coronaDetailedInfo = [
   },
   {'title': 'How to prevent it', 'path': 'assets/images/ic_washing_hands.png'},
   {'title': 'When to wear mask?', 'path': 'assets/images/ic_mask.png'},
-  {'title': 'Fake news?', 'path': 'assets/images/ic_fake_news.png'}
+  {'title': 'Fake news', 'path': 'assets/images/ic_fake_news.png'}
 ];
 
 final List<Map<String, String>> cases = [

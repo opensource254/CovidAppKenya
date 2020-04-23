@@ -19,7 +19,7 @@ class HealthUnitsNewsRow extends StatelessWidget {
           String title = healthUnitsNews[index]['title'];
           String path = healthUnitsNews[index]['path'];
           return Padding(
-            padding: const EdgeInsets.only(left: 30, right: 15),
+            padding: const EdgeInsets.only(left: 30, right: 15, top: 15),
             child: ReusableCardWithImageAsset(
               title: title,
               path: path,
