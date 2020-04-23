@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 
 import './home/home.dart';
 
-void main() {
+List kenyaData = [];
+
+void main() async {
+//  kenyaData = await getIndividualCountryData('Kenya');
+  print(kenyaData);
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'CovidApp',

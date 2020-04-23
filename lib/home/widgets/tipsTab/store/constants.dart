@@ -1,3 +1,11 @@
+final baseApiUrl = 'https://covid19-api.com/country';
+
+Map<String, String> coronaApiHeaders = {
+  "accept": "application/json",
+  "Content-Type": "application/json",
+  "ETag": "f959426e36d27587bd056de56a682b23"
+};
+
 final List<Map<String, dynamic>> coronaDetailedInfo = [
   {
     'title': 'What is Corona Virus?',
