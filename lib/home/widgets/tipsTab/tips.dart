@@ -14,6 +14,7 @@ class Tips extends StatelessWidget {
       itemBuilder: ((BuildContext context, index) {
         String _title = coronaDetailedInfo[index]['title'];
         String _path = coronaDetailedInfo[index]['path'];
+        String _content = coronaDetailedInfo[index]['content'];
 //        String _content = coronaDetailedInfo[index]['content'];
         return Padding(
           padding: const EdgeInsets.all(15.0),
@@ -22,21 +23,22 @@ class Tips extends StatelessWidget {
                 title: _title,
                 path: _path,
               ),
-              onTap: () => _handleCardTap(context, index, _title, _path)),
+              onTap: () =>
+                  _handleCardTap(context, index, _title, _path, _content)),
         );
       }),
     );
   }
 
-  void _handleCardTap(
-      BuildContext context, int index, String _title, String _path) {
+  void _handleCardTap(BuildContext context, int index, String _title,
+      String _path, String _content) {
     Navigator.push(context, MaterialPageRoute(builder: (_) {
       switch (index) {
         case (0):
           return ReUsablePageTitleContent(
             title: _title,
             imagePath: _path,
-            content: 'What is Rona',
+            content: _content,
           );
           break;
         case (1):
@@ -50,28 +52,28 @@ class Tips extends StatelessWidget {
           return ReUsablePageTitleContent(
             title: _title,
             imagePath: _path,
-            content: 'Transmission',
+            content: _content,
           );
           break;
         case (3):
           return ReUsablePageTitleContent(
             title: _title,
             imagePath: _path,
-            content: 'Prevention',
+            content: _content,
           );
           break;
         case (4):
           return ReUsablePageTitleContent(
             title: _title,
             imagePath: _path,
-            content: 'Mask',
+            content: _content,
           );
           break;
         case (5):
           return ReUsablePageTitleContent(
             title: _title,
             imagePath: _path,
-            content: 'Fake News',
+            content: _content,
           );
           break;
       }
