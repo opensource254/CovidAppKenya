@@ -24,11 +24,6 @@ class _TwitterListViewState extends State<TwitterListView>
     '',
     '',
     '',
-    '',
-    '',
-    '',
-    '',
-    ''
   ];
 
   @override

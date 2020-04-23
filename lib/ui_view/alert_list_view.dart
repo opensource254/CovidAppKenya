@@ -71,12 +71,13 @@ class _AlertListViewState extends State<AlertListView>
                             curve: Curves.fastOutSlowIn),
                       ),
                     );
+
                     animationController.forward();
                     return AreaView(
                       imagepath: areaListData[index],
                       animation: animation,
                       animationController: animationController,
-                    );
+                    );//AreaView
                   },
                 ),
               ),
