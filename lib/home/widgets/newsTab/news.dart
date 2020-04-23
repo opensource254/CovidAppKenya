@@ -60,7 +60,7 @@ class _NewsState extends State<News> with TickerProviderStateMixin {
 
 
   Future<bool> getData() async {
-    await Future<dynamic>.delayed(const Duration(milliseconds: 100));
+    await Future<dynamic>.delayed(const Duration(milliseconds: 200));
     return true;
   }
 
