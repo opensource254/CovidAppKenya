@@ -25,9 +25,6 @@ class _AlertListViewState extends State<AlertListView>
     '',
     '',
     '',
-    '',
-    '',
-    '',
     ''
   ];
 
