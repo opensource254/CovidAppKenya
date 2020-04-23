@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../reUsables/reUsableCard.dart';
+import 'store/constants.dart';
 
 class TopRowCasesCard extends StatelessWidget {
-  final List<Map<String, String>> cases = [
-    {'title': 'Cases', 'subtitle': '300'},
-    {'title': 'Recovered', 'subtitle': '100'},
-    {'title': 'Deaths', 'subtitle': '30'}
-  ];
-
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
