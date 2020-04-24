@@ -1,4 +1,4 @@
-#Fri Apr 24 15:11:08 EAT 2020
-base.0=C\:\\flutterprojects\\CovidAppKenya\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Fri Apr 24 16:14:21 EAT 2020
+base.0=D\:\\CodeProjects\\Android_Apps\\CovidAppKenya\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

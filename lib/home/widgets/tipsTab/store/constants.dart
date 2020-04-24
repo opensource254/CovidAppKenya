@@ -21,6 +21,7 @@ final List<Map<String, dynamic>> coronaDetailedInfo = [
   {
     'title': 'What is Corona Virus?',
     'path': 'assets/images/ic_corona.png',
+    'function':(){},
     'content':
         '!Coronaviruses are a large family of viruses that are known to cause illness ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS).'
             'What is a novel coronavirus?'
@@ -29,6 +30,7 @@ final List<Map<String, dynamic>> coronaDetailedInfo = [
   {
     'title': 'What are the symptoms?',
     'path': 'assets/images/ic_symptoms.png',
+    'function':(){},
     'content':
         'Coronaviruses are a large family of viruses that are known to cause illness ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS).'
             'What is a novel coronavirus?'
@@ -37,6 +39,7 @@ final List<Map<String, dynamic>> coronaDetailedInfo = [
   {
     'title': 'How it\'s transmitted',
     'path': 'assets/images/ic_transmission.png',
+    'function':(){},
     'content':
         'Coronaviruses are a large family of viruses that are known to cause illness ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS).'
             'What is a novel coronavirus?'
@@ -45,6 +48,7 @@ final List<Map<String, dynamic>> coronaDetailedInfo = [
   {
     'title': 'How to prevent it',
     'path': 'assets/images/ic_washing_hands.png',
+    'function':(){},
     'content':
         'Coronaviruses are a large family of viruses that are known to cause illness ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS).'
             'What is a novel coronavirus?'
@@ -53,6 +57,7 @@ final List<Map<String, dynamic>> coronaDetailedInfo = [
   {
     'title': 'When to wear mask?',
     'path': 'assets/images/ic_mask.png',
+    'function':(){},
     'content':
         'Coronaviruses are a large family of viruses that are known to cause illness ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS).'
             'What is a novel coronavirus?'

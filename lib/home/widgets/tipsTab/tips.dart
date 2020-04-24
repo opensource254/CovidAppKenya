@@ -1,83 +1,152 @@
+import 'package:covidappkenya/app_theme.dart';
+import 'package:covidappkenya/ui_view/alert_list_view.dart';
+import 'package:covidappkenya/ui_view/tips_list_view.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../widgets/reUsables/re-usablePage.dart';
-import '../../widgets/reUsables/reusableCardWithImageAsset.dart';
-import 'store/constants.dart';
+class Tips extends StatefulWidget {
+  const Tips({Key key}) : super(key: key);
 
-class Tips extends StatelessWidget {
+  @override
+  _TipsState createState() => _TipsState();
+
+}
+
+class _TipsState extends State<Tips> with TickerProviderStateMixin {
+  AnimationController animationController;
+  Animation<double> topBarAnimation;
+
+  List<Widget> listViews = <Widget>[];
+  final ScrollController scrollController = ScrollController();
+  double topBarOpacity = 0.0;
+
+
+  @override
+  void initState() {
+    animationController = AnimationController(
+        duration: const Duration(milliseconds: 600), vsync: this);
+
+    topBarAnimation = Tween<double>(begin: 0.0, end: 1.0).animate(
+        CurvedAnimation(
+            parent: animationController,
+            curve: Interval(0, 0.5, curve: Curves.fastOutSlowIn)));
+    addAllListData();
+
+    scrollController.addListener(() {
+      if (scrollController.offset >= 24) {
+        if (topBarOpacity != 1.0) {
+          setState(() {
+            topBarOpacity = 1.0;
+          });
+        }
+      } else if (scrollController.offset <= 24 &&
+          scrollController.offset >= 0) {
+        if (topBarOpacity != scrollController.offset / 24) {
+          setState(() {
+            topBarOpacity = scrollController.offset / 24;
+          });
+        }
+      } else if (scrollController.offset <= 0) {
+        if (topBarOpacity != 0.0) {
+          setState(() {
+            topBarOpacity = 0.0;
+          });
+        }
+      }
+    });
+
+
+    super.initState();
+  }
+
+
+  Future<bool> getData() async {
+    await Future<dynamic>.delayed(const Duration(milliseconds: 100));
+    return true;
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-      gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-      itemCount: coronaDetailedInfo.length,
-      itemBuilder: ((BuildContext context, index) {
-        String _title = coronaDetailedInfo[index]['title'];
-        String _path = coronaDetailedInfo[index]['path'];
-        String _content = coronaDetailedInfo[index]['content'];
-//        String _content = coronaDetailedInfo[index]['content'];
-        return Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: InkWell(
-              child: ReusableCardWithImageAsset(
-                title: _title,
-                path: _path,
+    return Scaffold(
+      backgroundColor: AppTheme.white,
+      body: FutureBuilder<bool>(
+        future: getData(),
+        builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+          if (!snapshot.hasData) {
+            return const SizedBox();
+          } else {
+            return Padding(
+              padding: EdgeInsets.only(top: MediaQuery.of(context).padding.top),
+              child: Column(
+                //mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+
+                  Expanded(
+                    child: Stack(
+                      children: <Widget>[
+                        getMainListViewUI(),
+                      ],
+                    ),//Stack
+                  ),//Container
+
+                  SizedBox(
+                    height: MediaQuery.of(context).padding.bottom,
+                  )
+
+                ],
               ),
-              onTap: () =>
-                  _handleCardTap(context, index, _title, _path, _content)),
-        );
-      }),
+            );
+          }
+        },
+      ),
     );
   }
 
-  void _handleCardTap(BuildContext context, int index, String _title,
-      String _path, String _content) {
-    Navigator.push(context, MaterialPageRoute(builder: (_) {
-      switch (index) {
-        case (0):
-          return ReUsablePageTitleContent(
-            title: _title,
-            imagePath: _path,
-            content: _content,
+  Widget getMainListViewUI() {
+    return FutureBuilder<bool>(
+      future: getData(),
+      builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
+        if (!snapshot.hasData) {
+          return const SizedBox();
+        } else {
+          return ListView.builder(
+            controller: scrollController,
+            itemCount: listViews.length,
+            scrollDirection: Axis.vertical,
+            itemBuilder: (BuildContext context, int index) {
+              animationController.forward();
+              return listViews[index];
+            },
           );
-          break;
-        case (1):
-          return ReUsablePageTitleContent(
-            title: _title,
-            imagePath: _path,
-            content: _content,
-          );
-          break;
-        case (2):
-          return ReUsablePageTitleContent(
-            title: _title,
-            imagePath: _path,
-            content: _content,
-          );
-          break;
-        case (3):
-          return ReUsablePageTitleContent(
-            title: _title,
-            imagePath: _path,
-            content: _content,
-          );
-          break;
-        case (4):
-          return ReUsablePageTitleContent(
-            title: _title,
-            imagePath: _path,
-            content: _content,
-          );
-          break;
-        case (5):
-          return ReUsablePageTitleContent(
-            title: _title,
-            imagePath: _path,
-            content: _content,
-          );
-          break;
-      }
-      return null;
-    }));
+        }
+      },
+    );
   }
+
+  void addAllListData() {
+    const int count = 8;
+
+    listViews.add(
+      TipsListView(
+        mainScreenAnimation: Tween<double>(begin: 0.0, end: 1.0).animate(
+            CurvedAnimation(
+                parent: animationController,
+                curve: Interval((1 / count) * 5, 1.0,
+                    curve: Curves.fastOutSlowIn))),
+        mainScreenAnimationController: animationController,
+      ),
+    );
+
+
+  }
+
+
 }
