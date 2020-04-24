@@ -19,6 +19,10 @@ class _TwitterListViewState extends State<TwitterListView>
   AnimationController animationController;
   List<String> areaListData = <String>[
     'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Coat_of_arms_of_Kenya_%28Official%29.svg/1200px-Coat_of_arms_of_Kenya_%28Official%29.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Coat_of_arms_of_Kenya_%28Official%29.svg/1200px-Coat_of_arms_of_Kenya_%28Official%29.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Coat_of_arms_of_Kenya_%28Official%29.svg/1200px-Coat_of_arms_of_Kenya_%28Official%29.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Coat_of_arms_of_Kenya_%28Official%29.svg/1200px-Coat_of_arms_of_Kenya_%28Official%29.svg.png',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Coat_of_arms_of_Kenya_%28Official%29.svg/1200px-Coat_of_arms_of_Kenya_%28Official%29.svg.png',
   ];
 
   @override
@@ -148,54 +152,6 @@ class AreaView extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             /*Twitter Name, handler time*/
-                            Row(
-                              children: <Widget>[
-                                Text(
-                                  "Ministry of health",
-                                  textAlign: TextAlign.left,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                      color: HexColor('000000'),
-                                      fontFamily: AppTheme.fontName,
-                                      fontWeight: FontWeight.bold),
-                                ), //Text
-
-                                Padding(
-                                  padding: EdgeInsets.only(left: 5),
-                                  child: Text(
-                                    "@MOH_Kenya",
-                                    textAlign: TextAlign.left,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      color: AppTheme.lightText,
-                                      fontFamily: AppTheme.fontName,
-                                    ),
-                                  ), //Text
-                                ), //Padding
-
-                                Padding(
-                                  padding: EdgeInsets.only(left: 5),
-                                  child: Text(
-                                    "1h",
-                                    textAlign: TextAlign.left,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: TextStyle(
-                                      color: AppTheme.lightText,
-                                      fontFamily: AppTheme.fontName,
-                                    ),
-                                  ), //Text
-                                ), //Padding
-
-                                Padding(
-                                    padding: EdgeInsets.only(left: 5),
-                                    child: Icon(
-                                      FeatherIcons.chevronDown,
-                                      size: 16,
-                                      color: AppTheme.lightText,
-                                    ) //Icon
-                                    ), //Padding
-                              ],
-                            ), //Row
                             Row(
                               children: <Widget>[
                                 Text(
