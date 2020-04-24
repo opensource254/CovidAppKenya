@@ -9,9 +9,12 @@ Map<String, String> coronaApiHeaders = {
 };
 
 final List<Map<String, String>> cases = [
-  {'title': 'Cases', 'subtitle': totalCases},
-  {'title': 'Recovered', 'subtitle': totalRecovered},
-  {'title': 'Deaths', 'subtitle': totalDeaths}
+  {'title': 'Cases', 'subtitle': totalCases == null ? '--' : totalCases},
+  {
+    'title': 'Recovered',
+    'subtitle': totalRecovered == null ? '--' : totalRecovered
+  },
+  {'title': 'Deaths', 'subtitle': totalDeaths == null ? '--' : totalDeaths}
 ];
 
 final List<Map<String, dynamic>> coronaDetailedInfo = [
