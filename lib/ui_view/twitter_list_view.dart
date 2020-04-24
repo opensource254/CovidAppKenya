@@ -2,7 +2,6 @@ import 'package:covidappkenya/app_theme.dart';
 import 'package:covidappkenya/helpers/hex_color.dart';
 import 'package:feather_icons_flutter/feather_icons_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TwitterListView extends StatefulWidget {
   const TwitterListView(
@@ -19,14 +18,7 @@ class _TwitterListViewState extends State<TwitterListView>
     with TickerProviderStateMixin {
   AnimationController animationController;
   List<String> areaListData = <String>[
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
-    '',
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Coat_of_arms_of_Kenya_%28Official%29.svg/1200px-Coat_of_arms_of_Kenya_%28Official%29.svg.png',
   ];
 
   @override
@@ -59,10 +51,10 @@ class _TwitterListViewState extends State<TwitterListView>
                 physics: const BouncingScrollPhysics(),
                 children: List<Widget>.generate(
                   areaListData.length,
-                      (int index) {
+                  (int index) {
                     final int count = areaListData.length;
                     final Animation<double> animation =
-                    Tween<double>(begin: 0.0, end: 1.0).animate(
+                        Tween<double>(begin: 0.0, end: 1.0).animate(
                       CurvedAnimation(
                         parent: animationController,
                         curve: Interval((1 / count) * index, 1.0,
@@ -135,90 +127,136 @@ class AreaView extends StatelessWidget {
                   borderRadius: const BorderRadius.all(Radius.circular(8.0)),
                   splashColor: AppTheme.nearlyDarkBlue.withOpacity(0.2),
                   onTap: () {},
-                  child: Flexible(
-                    child: Row(
-                      children: <Widget>[
+                  child: Row(
+                    children: <Widget>[
+                      /*Twitter avatar*/
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: 10.0,
+                        ),
+                        child: CircleAvatar(
+                          backgroundImage: NetworkImage(imagepath),
+                          backgroundColor: Colors.white12,
+                          radius: 30,
+                        ),
+                      ), //Padding
 
-                        Padding(
-                          padding:EdgeInsets.only(left: 10.0,),
-                          child: CircleAvatar(
-                            child: Icon(FontAwesomeIcons.twitter,color: Colors.white,),
-                            backgroundColor: Colors.blue,
-                            radius: 30,
-                          ),
-                        ),//Padding
+                      Padding(
+                        padding: EdgeInsets.only(left: 10.0, top: 20.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            /*Twitter Name, handler time*/
+                            Row(
+                              children: <Widget>[
+                                Text(
+                                  "Ministry of health",
+                                  textAlign: TextAlign.left,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                      color: HexColor('000000'),
+                                      fontFamily: AppTheme.fontName,
+                                      fontWeight: FontWeight.bold),
+                                ), //Text
 
-                        Padding(
-                            padding: EdgeInsets.only(left: 10.0,top: 20.0),
-                            child: Flexible(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
+                                Padding(
+                                  padding: EdgeInsets.only(left: 5),
+                                  child: Text(
+                                    "@MOH_Kenya",
+                                    textAlign: TextAlign.left,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      color: AppTheme.lightText,
+                                      fontFamily: AppTheme.fontName,
+                                    ),
+                                  ), //Text
+                                ), //Padding
 
-                                  /*Twitter Name, handler time*/
-                                  Row(children: <Widget>[
+                                Padding(
+                                  padding: EdgeInsets.only(left: 5),
+                                  child: Text(
+                                    "1h",
+                                    textAlign: TextAlign.left,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      color: AppTheme.lightText,
+                                      fontFamily: AppTheme.fontName,
+                                    ),
+                                  ), //Text
+                                ), //Padding
 
-                                    Text(
-                                      "Ministry of health",
-                                      textAlign: TextAlign.left,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                          color: HexColor('000000'),
-                                          fontFamily: AppTheme.fontName,
-                                          fontWeight: FontWeight.bold
-                                      ),
-                                    ),//Text
+                                Padding(
+                                    padding: EdgeInsets.only(left: 5),
+                                    child: Icon(
+                                      FeatherIcons.chevronDown,
+                                      size: 16,
+                                      color: AppTheme.lightText,
+                                    ) //Icon
+                                    ), //Padding
+                              ],
+                            ), //Row
+                            Row(
+                              children: <Widget>[
+                                Text(
+                                  "Ministry of health",
+                                  textAlign: TextAlign.left,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                      color: HexColor('000000'),
+                                      fontFamily: AppTheme.fontName,
+                                      fontWeight: FontWeight.bold),
+                                ), //Text
 
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 5),
-                                      child: Text(
-                                        "@MOH_Kenya",
-                                        textAlign: TextAlign.left,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                          color: AppTheme.lightText,
-                                          fontFamily: AppTheme.fontName,
-                                        ),
-                                      ),//Text
-                                    ),//Padding
+                                Padding(
+                                  padding: EdgeInsets.only(left: 5),
+                                  child: Text(
+                                    "@MOH_Kenya",
+                                    textAlign: TextAlign.left,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      color: AppTheme.lightText,
+                                      fontFamily: AppTheme.fontName,
+                                    ),
+                                  ), //Text
+                                ), //Padding
 
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 5),
-                                      child: Text(
-                                        "1h",
-                                        textAlign: TextAlign.left,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                          color: AppTheme.lightText,
-                                          fontFamily: AppTheme.fontName,
-                                        ),
-                                      ),//Text
-                                    ),//Padding
+                                Padding(
+                                  padding: EdgeInsets.only(left: 5),
+                                  child: Text(
+                                    "1h",
+                                    textAlign: TextAlign.left,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      color: AppTheme.lightText,
+                                      fontFamily: AppTheme.fontName,
+                                    ),
+                                  ), //Text
+                                ), //Padding
 
-                                    Padding(
-                                        padding: EdgeInsets.only(left: 5),
-                                        child: Icon(
-                                          FeatherIcons.chevronDown,
-                                          size: 16,
-                                          color: AppTheme.lightText,
-                                        )//Icon
-                                    ),//Padding
+                                Padding(
+                                    padding: EdgeInsets.only(left: 5),
+                                    child: Icon(
+                                      FeatherIcons.chevronDown,
+                                      size: 16,
+                                      color: AppTheme.lightText,
+                                    ) //Icon
+                                    ), //Padding
+                              ],
+                            ), //Row
 
-
-                                  ],),//Row
-
-                                  /*Twitter text*/
-
-
-                                ],
-                              ),//Column
-                            )//Expanded
-                        ),//Padding
-
-                      ],
-                    ),//Row
-                  ),//Flexible
+                            /*Twitter text*/
+                            Padding(
+                                padding: EdgeInsets.only(top: 10),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[],
+                                )),
+                          ],
+                        ), //Column
+                      ), //Padding
+                    ],
+                  ), //Row
                 ),
               ),
             ),
