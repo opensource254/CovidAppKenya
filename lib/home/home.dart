@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'bottomNavBar/bottomNavigation.dart';
 import 'widgets/alertsTab/alerts.dart';
 import 'widgets/homeTab/landingPage.dart';
-import 'widgets/newsTab/news.dart';
 import 'widgets/situationTab/situation.dart';
-import 'widgets/tipsTab/tips.dart';
 
 class Home extends StatefulWidget {
   final int showWhichTabs;
@@ -19,15 +17,11 @@ class _HomeState extends State<Home> {
   int _currentTabIndex = 0;
   String _title;
   String _homeTitle = 'Covid-19 Kenya';
-  String _tipsTitle = 'Tips on Covid-19';
-  String _newsTitle = 'News on Covid-19';
   String _alertsTitle = 'Covid-19 Alerts';
   String _situationTitle = 'Situation';
 
   final List<Widget> _bodyChildren = [
     HomeLanding(),
-    Tips(),
-    News(),
     Alerts(),
     Situation(),
   ];
@@ -40,10 +34,8 @@ class _HomeState extends State<Home> {
         ? widget.showWhichTabs
         : _currentTabIndex; //set new index when navigating from another page
     if (widget.showWhichTabs == 0) _title = _homeTitle;
-    if (widget.showWhichTabs == 1) _title = _tipsTitle;
-    if (widget.showWhichTabs == 2) _title = _newsTitle;
-    if (widget.showWhichTabs == 3) _title = _alertsTitle;
-    if (widget.showWhichTabs == 4) _title = _situationTitle;
+    if (widget.showWhichTabs == 1) _title = _alertsTitle;
+    if (widget.showWhichTabs == 2) _title = _situationTitle;
   }
 
   void onTabTapped(int index) {
@@ -52,10 +44,8 @@ class _HomeState extends State<Home> {
       dynamicOnTap(
         index: index,
         caseZeroTitle: _homeTitle,
-        caseOneTitle: _tipsTitle,
-        caseTwoTitle: _newsTitle,
-        caseThreeTitle: _alertsTitle,
-        caseFourTitle: _situationTitle,
+        caseOneTitle: _alertsTitle,
+        caseTwoTitle: _situationTitle,
       );
     });
   }
@@ -65,8 +55,6 @@ class _HomeState extends State<Home> {
     @required String caseZeroTitle,
     @required String caseOneTitle,
     @required String caseTwoTitle,
-    @required String caseThreeTitle,
-    @required String caseFourTitle,
   }) {
     switch (index) {
       case 0:
@@ -77,12 +65,6 @@ class _HomeState extends State<Home> {
         break;
       case 2:
         _title = caseTwoTitle;
-        break;
-      case 3:
-        _title = caseThreeTitle;
-        break;
-      case 4:
-        _title = caseFourTitle;
         break;
     }
   }

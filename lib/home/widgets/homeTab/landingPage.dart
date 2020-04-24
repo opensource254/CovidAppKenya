@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../../home/widgets/tipsTab/tips.dart';
 import '../../home.dart';
 import '../../widgets/reUsables/reusableButton.dart';
-import '../../widgets/tipsTab/coronaInfoGridOnHomePage.dart';
 import '../../widgets/tipsTab/healthUnitsNewsRow.dart';
 import '../../widgets/tipsTab/topRowCasesCard.dart';
 
@@ -38,10 +38,7 @@ class HomeLanding extends StatelessWidget {
           margin: EdgeInsets.only(left: 20),
           child: Text('Tips'),
         ),
-        SizedBox(
-          height: 10,
-        ),
-        CoronaInfoGridOnHomePage(),
+        Tips(),
         SizedBox(
           height: 5,
         ),

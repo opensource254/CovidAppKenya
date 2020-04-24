@@ -8,14 +8,14 @@ class Tips extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
+      shrinkWrap: true,
       gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
       itemCount: coronaDetailedInfo.length,
       itemBuilder: ((BuildContext context, index) {
         String _title = coronaDetailedInfo[index]['title'];
         String _path = coronaDetailedInfo[index]['path'];
         String _content = coronaDetailedInfo[index]['content'];
-//        String _content = coronaDetailedInfo[index]['content'];
         return Padding(
           padding: const EdgeInsets.all(15.0),
           child: InkWell(
