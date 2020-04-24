@@ -6,6 +6,8 @@ import 'home/widgets/tipsTab/store/dataminer/casesDataMiner.dart';
 Map kenyaData = {};
 
 void main() async {
+  kenyaData = await getIndividualCountryData('Kenya');
+
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'CovidApp',
@@ -31,5 +33,4 @@ void main() async {
     ),
     home: Home(showWhichTabs: 0),
   ));
-  kenyaData = await getIndividualCountryData('Kenya');
 }
