@@ -24,14 +24,6 @@ class MyBottomNavigationBar extends StatelessWidget {
           backgroundColor: Colors.blue,
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.scatter_plot),
-          title: Text('Tips'),
-        ),
-        BottomNavigationBarItem(
-          icon: BottomNavIconImage('assets/images/icnews.png'),
-          title: Text('News'),
-        ),
-        BottomNavigationBarItem(
             icon: Icon(Icons.error),
             title: Text('Alerts'),
             backgroundColor: Colors.green),
