@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Fri Apr 24 14:55:31 EAT 2020
+=======
+#Fri Apr 24 12:27:54 EAT 2020
+>>>>>>> devMjBr
 base.0=C\:\\flutterprojects\\CovidAppKenya\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

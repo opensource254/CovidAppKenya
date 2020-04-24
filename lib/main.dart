@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 import './home/home.dart';
+import 'home/widgets/tipsTab/store/dataminer/casesDataMiner.dart';
 
-void main() {
-  //set system settings i.e orientation
-//  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitUp]);
+Map kenyaData = {};
+
+void main() async {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'CovidApp',
@@ -30,4 +31,5 @@ void main() {
     ),
     home: Home(showWhichTabs: 0),
   ));
+  kenyaData = await getIndividualCountryData('Kenya');
 }

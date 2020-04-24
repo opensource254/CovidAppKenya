@@ -20,7 +20,7 @@ class TopRowCasesCard extends StatelessWidget {
             child: ReUsableCard(
               title: title,
               subtitle: totals.toString(),
-              color: Colors.lightBlueAccent,
+              color: Color(0xFFA0D2ED),
             ),
           );
         });
