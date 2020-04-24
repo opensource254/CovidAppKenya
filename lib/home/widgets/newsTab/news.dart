@@ -88,9 +88,6 @@ class _NewsState extends State<News> with TickerProviderStateMixin {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
 
-                  //Appbar
-                  appBar(),
-
                   Expanded(
                     child: Stack(
                       children: <Widget>[
@@ -148,49 +145,6 @@ class _NewsState extends State<News> with TickerProviderStateMixin {
     );
 
 
-  }
-
-  Widget appBar() {
-    return SizedBox(
-      height: AppBar().preferredSize.height,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(top: 8, left: 20),
-            child: Container(
-              width: AppBar().preferredSize.height - 8,
-              height: AppBar().preferredSize.height - 8,
-            ),
-          ),
-          Expanded(
-              child: Center(
-                child: Row(
-                  children: <Widget>[
-
-                    Text(
-                      'News',
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: AppTheme.nearlyDarkBlue,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ), //Text
-
-                    Container(
-                      width: 10.0,
-                      height: 50.0,
-                    ), //Container
-
-
-                  ],
-                ), //Row
-              ) //Center
-
-          ),
-        ],
-      ),
-    );
   }
 
 
