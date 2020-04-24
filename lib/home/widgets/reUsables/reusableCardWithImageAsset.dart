@@ -9,8 +9,16 @@ class ReusableCardWithImageAsset extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        borderRadius: new BorderRadius.only(
+          topLeft: new Radius.circular(10),
+          bottomLeft: new Radius.circular(10),
+          topRight: new Radius.circular(10),
+          bottomRight: new Radius.circular(10),
+        ),
+        color: Color(0xFFA0D2ED),
+      ),
       margin: EdgeInsets.only(top: 2, bottom: 2, right: 2, left: 2),
-      color: Colors.white,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -20,7 +28,7 @@ class ReusableCardWithImageAsset extends StatelessWidget {
             scale: 10,
           ),
           Container(
-            margin: EdgeInsets.only(top: 2),
+            margin: EdgeInsets.only(top: 3),
             alignment: Alignment.center,
             child: Text(
               title,

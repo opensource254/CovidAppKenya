@@ -38,6 +38,3 @@ Check out on how to submit your  [contributions](/CONTRIBUTING.md) to the projec
 
 [CSSEGISandData  ](https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data)
 
-# Licence
-[MIT](/LICENSE)
-

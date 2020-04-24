@@ -1,5 +1,6 @@
-import 'package:covidappkenya/home/widgets/reUsables/reusableCardWithImageAsset.dart';
 import 'package:flutter/material.dart';
+
+import '../../widgets/reUsables/reusableCardWithImageAsset.dart';
 
 class CoronaInfoGridOnHomePage extends StatelessWidget {
   @override
