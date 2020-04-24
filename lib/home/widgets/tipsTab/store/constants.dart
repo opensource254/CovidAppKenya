@@ -1,4 +1,6 @@
-final baseApiUrl = 'https://covid19-api.com/country';
+import 'dataminer/casesDataMiner.dart';
+
+final baseApiUrl = 'https://rona-api.herokuapp.com';
 
 Map<String, String> coronaApiHeaders = {
   "accept": "application/json",
@@ -6,12 +8,18 @@ Map<String, String> coronaApiHeaders = {
   "ETag": "f959426e36d27587bd056de56a682b23"
 };
 
+final List<Map<String, String>> cases = [
+  {'title': 'Cases', 'subtitle': totalCases},
+  {'title': 'Recovered', 'subtitle': totalRecovered},
+  {'title': 'Deaths', 'subtitle': totalDeaths}
+];
+
 final List<Map<String, dynamic>> coronaDetailedInfo = [
   {
     'title': 'What is Corona Virus?',
     'path': 'assets/images/ic_corona.png',
     'content':
-        'Coronaviruses are a large family of viruses that are known to cause illness ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS).'
+        '!Coronaviruses are a large family of viruses that are known to cause illness ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS).'
             'What is a novel coronavirus?'
             'A novel coronavirus (CoV) is a new strain of coronavirus that has not been previously identified in humans.',
   },
@@ -55,10 +63,4 @@ final List<Map<String, dynamic>> coronaDetailedInfo = [
             'What is a novel coronavirus?'
             'A novel coronavirus (CoV) is a new strain of coronavirus that has not been previously identified in humans.'
   }
-];
-
-final List<Map<String, String>> cases = [
-  {'title': 'Cases', 'subtitle': '300'},
-  {'title': 'Recovered', 'subtitle': '100'},
-  {'title': 'Deaths', 'subtitle': '30'}
 ];

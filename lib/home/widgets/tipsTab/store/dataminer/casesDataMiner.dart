@@ -4,18 +4,24 @@ import 'package:http/http.dart' as http;
 
 import '../constants.dart';
 
-Future<List> getIndividualCountryData(String countryName) async {
-  final String url = baseApiUrl + '?name=Kenya&format=json';
+String totalCases;
+String totalRecovered;
+String totalDeaths;
+
+//get cases for country
+Future<Map> getIndividualCountryData(String countryName) async {
+  final String url = baseApiUrl + "/$countryName";
   //make request to get response
-  List _countryDetails = [];
-  http.Response response =
-      await http.get(baseApiUrl, headers: coronaApiHeaders);
+  Map<String, dynamic> _countryDetails = {};
+  http.Response response = await http.get(url, headers: coronaApiHeaders);
   if (_countryDetails != null) {
     _countryDetails.clear();
   }
-  var decodedData =
-      jsonDecode(response.body); //decode response string of the body
-  _countryDetails.add(decodedData['api']['fixtures']);
-  print(_countryDetails);
+  //decode response string of the body
+  var decodedData = jsonDecode(response.body);
+  _countryDetails.addAll(decodedData);
+  totalCases = _countryDetails['total']['reported'].toString();
+  totalRecovered = _countryDetails['total']['recovered'].toString();
+  totalDeaths = _countryDetails['total']['deaths'].toString();
   return _countryDetails;
 }

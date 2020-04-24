@@ -45,7 +45,7 @@ class Tips extends StatelessWidget {
           return ReUsablePageTitleContent(
             title: _title,
             imagePath: _path,
-            content: 'Symptoms',
+            content: _content,
           );
           break;
         case (2):

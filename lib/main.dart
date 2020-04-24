@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 import './home/home.dart';
+import 'home/widgets/tipsTab/store/dataminer/casesDataMiner.dart';
 
-List kenyaData = [];
+Map kenyaData = {};
 
 void main() async {
-//  kenyaData = await getIndividualCountryData('Kenya');
-  print(kenyaData);
+  kenyaData = await getIndividualCountryData('Kenya');
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     title: 'CovidApp',
