@@ -203,10 +203,9 @@ class AreaView extends StatelessWidget {
                             /*Twitter text*/
                             Padding(
                               padding: EdgeInsets.only(top: 10),
-                              child:  Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                              child:  ListView(
                                 children: <Widget>[
-
+                                  Text('')
                                 ],
                               )
                             ),
